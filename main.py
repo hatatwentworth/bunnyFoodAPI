@@ -23,7 +23,7 @@ app.add_middleware(
 )
 
 # Connect MongoDB
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://hatatwit:admin123456@cluster0.ydwrobg.mongodb.net/?retryWrites=true&w=majority")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://<USERNAME>:<PASSWORD>@cluster0.ydwrobg.mongodb.net/?retryWrites=true&w=majority")
 db = client.bunnyFoodDB
 
 # Convert ObjectIds to strings before storing them as the _id
