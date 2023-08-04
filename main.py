@@ -133,5 +133,5 @@ async def delete_food(id: str):
 
     raise HTTPException(status_code=404, detail=f"Food {id} not found")
 
-if __name__ == "__main__":
-    uvicorn.run(app, port=8080, host="localhost")
+# if __name__ == "__main__":
+#     uvicorn.run(app, port=8080, host="localhost")
