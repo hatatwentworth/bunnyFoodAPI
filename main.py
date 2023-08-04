@@ -7,6 +7,11 @@ from bson import ObjectId
 from typing import Optional, List
 import motor.motor_asyncio
 import uvicorn
+import os
+
+# Get environment variables
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.environ.get('PASSWORD')
 
 # Initializing FastAPI server
 app = FastAPI()
@@ -23,7 +28,7 @@ app.add_middleware(
 )
 
 # Connect MongoDB
-client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://hatatwit:pass123@cluster0.ydwrobg.mongodb.net/?retryWrites=true&w=majority")
+client = motor.motor_asyncio.AsyncIOMotorClient("mongodb+srv://USERNAME:PASSWORD@cluster0.ydwrobg.mongodb.net/?retryWrites=true&w=majority")
 db = client.bunnyFoodDB
 
 # Convert ObjectIds to strings before storing them as the _id
