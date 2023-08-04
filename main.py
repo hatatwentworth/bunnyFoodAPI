@@ -7,6 +7,11 @@ from bson import ObjectId
 from typing import Optional, List
 import motor.motor_asyncio
 import uvicorn
+import os
+
+os.environ.get('USERNAME')
+os.environ.get('PASSWORD')
+
 
 # Initializing FastAPI server
 app = FastAPI()
