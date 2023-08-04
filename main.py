@@ -99,8 +99,7 @@ async def list_foods():
 # Get specific food by name
 @app.get("/{inputFood}", response_description="Get specifc food by name", response_model=Food)
 async def get_food(inputFood: str):
-    food = await db["foods"].find_one({"food": inputFood})
-    if food is not None:
+    if (food := await db["foods"].find_one({"food": inputFood})) is not None:
         return food
 
     raise HTTPException(status_code=404, detail=f"Food {inputFood} not found")
