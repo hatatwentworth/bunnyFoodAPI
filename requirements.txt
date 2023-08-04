@@ -15,4 +15,3 @@ starlette==0.22.0
 typing-extensions==4.4.0
 uvicorn==0.20.0
 wheel==0.38.4
-python~=3.8
